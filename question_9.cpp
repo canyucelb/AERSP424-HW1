@@ -41,7 +41,9 @@ string predict_engine_type(const vector<double>& w, const vector<double>& x) {
 
 int main() {
     // Define the trained weights (w) obtained from question_8.cpp. Weights are trained as (w): 0.217053, -0.458169, -0.014794
-    vector<double> trained_weights = {0.217053, -0.458169, -0.014794}; 
+    //vector<double> trained_weights = {0.0957333,-0.204969, -0.0001656}; 
+    vector<double> trained_weights = {0.0957333,-0.204969, -0.0001656 }; 
+     
     // Let’s we have four new aircraft date, which are also taken from faa.gov
     vector<vector<double>> new_aircraft_data = {
         {87.0, 38.67, 6.000},

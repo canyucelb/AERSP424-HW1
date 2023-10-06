@@ -55,6 +55,8 @@ vector<double> train_classifier(const vector<vector<double>>& aircraft_data, con
                 w[j] = max(min(w[j], 1.0), -1.0);
             }
         }
+    std::cout << w[0] << "," << dW[0] << std::endl;
+    
     }
 
     return w;
@@ -66,6 +68,7 @@ std::vector<int> fit(std::vector<std::vector<double>> data, std::vector<double> 
         auto d = data[i];
         double z = 0;
         for(size_t j=0;j<d.size();j++){
+
             z+= d[j]*weights[j];
         }
         int c = std::round(sigmoid(z));
@@ -91,7 +94,7 @@ int main() {
     vector<int> engine_types = {1, 0, 1, 0, 1, 0, 1, 0};
 
     // Pick the number no less than 100 to be the maximum number of iterations.
-    int max_iterations = 100000;  
+    int max_iterations = 100;  
     // Learning rate
     double learning_rate = 0.001;  
 
